@@ -1,8 +1,8 @@
 # build stage
 FROM postgis/postgis as postgres
 
-RUN  apt update \
-  && apt install -y wget \
+RUN  apt-get update \
+  && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /dbruns
