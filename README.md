@@ -148,7 +148,7 @@ conn <- dbConnect(dbDriver('PostgreSQL'),
                  password = 'postgres')
 
 sites <- dbGetQuery(conn, "SELECT * FROM ndb.sites WHERE sitename LIKE 'Lake%'")
-plot(sites$latitudenorth ~ site$longitudeeast)
+plot(sites$latitudenorth ~ sites$longitudeeast)
 ```
 
 ![A plot of the sites selected using the query showing the global coverage of Neotoma data.](img/neotomasiteimages.png)
